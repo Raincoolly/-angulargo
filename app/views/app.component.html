@@ -1,0 +1,29 @@
+<div>
+    <my-child></my-child>
+    <my-child></my-child>
+    <my-child></my-child>
+    <my-child></my-child>
+    <my-child></my-child>
+    <my-child></my-child>
+
+	<h1>你好，a的值是啊{{a}}</h1>
+	<input type="button" value="按我" (click)="fun()">
+
+    <input type="text" [value]="a" (input)="a=$event.target.value">
+    <input type="text" [(ngModel)]="a">
+
+    <ul>
+        <li *ngFor="let item of list">{{item}}</li>
+    </ul>
+
+    <input type="button" value="按我" (click)="changeshow()">
+    <div class="box" *ngIf="isShow"></div>
+
+    <p *ngFor="let item of wangzhiArr"><a [href]="item.url">{{item.name}}</a></p>
+
+    <input type="text" (keyup)="ku($event)">
+    <p>{{values}}</p>
+
+    <input type="text" #srk (keyup)="0">
+    <p>{{srk.value}}</p>
+</div>
